@@ -1,0 +1,175 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  font-family: "Microsoft YaHei light","Microsoft",sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none; }
+
+.container {
+  width: 100%;
+  height: 680px;
+  padding: 0 30px; }
+  .container .product {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #F2F2F2;
+    position: relative; }
+
+.show {
+  position: absolute;
+  left: 50%;
+  margin-left: -232px;
+  top: 50%;
+  margin-top: -410px;
+  height: 600px;
+  transition: transform .8s ease; }
+  .show .timeLine {
+    position: relative;
+    background: url("../images/Legacy_timeline.png") repeat-x;
+    height: 23px;
+    left: -414px;
+    width: 8387px;
+    margin-top: -25px;
+    top: 100%; }
+
+.introduce.active {
+  opacity: 1;
+  visibility: visible; }
+
+.introduce {
+  position: absolute;
+  width: 464px;
+  margin-top: 130px;
+  float: left;
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .8s ease,visibility .8s ease; }
+  .introduce .logo {
+    text-align: center; }
+    .introduce .logo > img {
+      width: 68px;
+      height: 102px; }
+  .introduce .header {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 40px; }
+  .introduce .title {
+    font-size: 13px;
+    text-align: center;
+    margin-top: 3px; }
+  .introduce .text {
+    font-size: 13px;
+    margin:45px 0 20px;}
+
+.item {
+  position: absolute;
+  margin-top: 100px;
+  top: 0px;
+  width: 620px;
+  transform: translate3d(0px, 0px, 0px);
+  transition: transform .8s ease;
+  z-index: 2; }
+  .item .picture > img {
+    position: absolute;
+    top: 0px;
+    right: 310px; }
+  .item .information {
+    float: right;
+    width: 260px;
+    height: 521px;
+    visibility: hidden;
+    opacity: 0;
+    position: relative;
+    transition: opacity .9s ease .8s; }
+    .item .information .header {
+      width: 500px;
+      margin-left: -5px;
+      font-size: 90px;
+      margin-bottom: 0px;
+      margin-top: -35px;
+      line-height: normal;
+      padding-top: 40px;
+      font-family: GothamThin, sans-serif; }
+    .item .information > p {
+      line-height: 1; }
+      .item .information > p span, .item .information > p span b {
+        font-size: 13px; }
+      .item .information > p span b {
+        font-weight: bold; }
+    .item .information .text p {
+      margin-top: 25px;
+      font-size: 13px;
+      line-height: 16px; }
+    .item .information .btn {
+      margin-top: 30px; }
+    .item .information .year {
+      position: absolute;
+      top: 500px;
+      left: 0px;
+      margin-left: -107px;
+      width: 200px;
+      color: #000000;
+      font-weight: normal;
+      font-size: 13px;
+      line-height: 16px;
+      font-family: ProximaRegular, sans-serif;
+      text-align: center; }
+      .item .information .year .point {
+        display: block;
+        color: #c70000;
+        font-size: 24px; }
+.item.active {
+  transform: translate3d(-120px, 0px, 0px); }
+  .item.active .information {
+    visibility: visible;
+    opacity: 1; }
+
+/*指示器 S */
+.indicators {
+  position: absolute;
+  margin: 0 auto;
+  z-index: 2;
+  text-align: center;
+  top: 85%;
+  width: 100%; }
+  .indicators li {
+    position: relative;
+    width: 52px;
+    height: 52px;
+    margin: 0 8px;
+    display: inline-block;
+    cursor: pointer; }
+    .indicators li:hover .btnImg.hover {
+      opacity: 1; }
+    .indicators li > .btnImg {
+      width: 52px;
+      height: 52px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 1;
+      transition: opacity .5s ease; }
+    .indicators li > .btnImg.hover {
+      opacity: 0; }
+  .indicators li.active > .btnImg.hover {
+    opacity: 1; }
+/*指示器 E */
+/*翻页 S */
+.slide{
+  position: absolute;
+  top:0;
+  width: 10%;
+  height: 100%;
+  z-index:1000;
+}
+.slide:nth-of-type(2){
+  left:90%;
+}
+/*翻页 E */
